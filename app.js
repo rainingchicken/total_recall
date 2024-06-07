@@ -47,7 +47,7 @@
 // const permit = (age) => {
 //   return age >= 16 ? "Here are the keys!" : "Sorry, you're too young.";
 // };
-// //console.log(permit(driverAge));
+// console.log(permit(driverAge));
 
 // //LOOPS
 // for (let i = 0; i < 100; i++) {
@@ -70,15 +70,15 @@
 //   console.log(index + 3);
 // }
 
-//Get Even
-//Print out the numbers that are within the range of 1 - 100
-//Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+// //Get Even
+// //Print out the numbers that are within the range of 1 - 100
+// //Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
 // for (let index = 1; index < 100; index++) {
 //   console.log(index % 2 == 0 ? index + " <-- is an even number" : index);
 // }
 
-//Give Me 5
-// For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+// //Give Me 5
+// //For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
 // for (let index = 0; index <= 100; index++) {
 //   if (index % 3 == 0 && index % 5 == 0) {
 //     console.log("I found a " + index + ". Three is a crowd. High five!");
@@ -89,22 +89,154 @@
 //   }
 // }
 
-//Savings Account
-//Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+// //Savings Account
+// //Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
 // let bank_account = 0;
 // for (let index = 1; index <= 10; index++) {
 //   bank_account += index;
 // }
 // console.log(bank_account);
 
-//You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+// //You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
 // bank_account = 0;
 // for (let index = 1; index <= 100; index++) {
 //   bank_account += index * 2;
 // }
 // console.log(bank_account);
 
-//ARRAYS & CONTROL FLOW
+// //ARRAYS & CONTROL FLOW
+// //1. What are the things in an array called?
+// //elements
+// //2.Do Arrays guarantee those things will be in order?
+// //yes?
+// //What real-life thing could you model with an array?
+// //names of employees or something
+
+// //Easy Does It
+// //Create an array that contains three quotes and store it in a variable called quotes
+// let quotes = ["bruh", "yo", "noice"];
+
+// //Accessing elements
+// const randomThings = [1, 10, "Hello", true];
+// //How do you access the 1st element in the array?
+// randomThings[0];
+// //Change the value of "Hello"to "World"
+// randomThings[2] = "World";
+// //Check the value of the array to make sure it updated the array. How? Why, yes!
+// console.log(randomThings);
+
+// const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+// //What would you write to access the 3rd element of the array?
+// ourClass[2];
+// //Change the value of "Github" to "Octocat"
+// ourClass[4] = "Octocat";
+// //Add a new element, "Cloud City" to the array
+// ourClass.push("Cloud City");
+// console.log(ourClass);
+
+// const myArray = [5, 10, 500, 20];
+// //Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
+// myArray.push("Aegon");
+// //Remove the 5from the beginning of the array.
+// myArray.shift();
+// //Add the string "Bob Marley"to the beginning of the array.
+// myArray.unshift("Bob Marley");
+// //Remove the string of your choice from the end of the array.
+// myArray.pop();
+// //Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse()method return anything?
+// myArray.reverse(); //reverses the order of elements
+// console.log(myArray);
+
+// //console.log()s "little number" if the number is entered is less than 100
+// let n = 10;
+// if (n < 100) {
+//   console.log("little number");
+// }
+// //console.log()s big numberif the number is greater than or equal to 100.
+// if (n >= 100) {
+//   console.log("big number");
+// }
+
+// //console.log()little numberif the number entered is less than 5.
+// //If the number entered is more than 10, log big number.
+// //Otherwise, log "monkey".
+// let num = 10;
+// if (num < 5) {
+//   console.log("little number");
+// } else if (num > 10) {
+//   console.log("big number");
+// } else {
+//   console.log("monkey");
+// }
+
+// const kristynsCloset = [
+//   "left shoe",
+//   "cowboy boots",
+//   "right sock",
+//   "GA hoodie",
+//   "green pants",
+//   "yellow knit hat",
+//   "marshmallow peeps",
+// ];
+
+// // Thom's closet is more complicated. Check out this nested data structure!!
+// const thomsCloset = [
+//   [
+//     // These are Thom's shirts
+//     "grey button-up",
+//     "dark grey button-up",
+//     "light blue button-up",
+//     "blue button-up",
+//   ],
+//   [
+//     // These are Thom's pants
+//     "grey jeans",
+//     "jeans",
+//     "PJs",
+//   ],
+//   [
+//     // Thom's accessories
+//     "wool mittens",
+//     "wool scarf",
+//     "raybans",
+//   ],
+// ];
+
+// //What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
+// console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!");
+
+// //Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".
+// kristynsCloset.splice(6, 0, "raybans");
+// console.log(kristynsCloset);
+
+// //Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
+// kristynsCloset[5] = "stained knit hat";
+// console.log(kristynsCloset);
+
+// //Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirtsarray.
+// thomsCloset[0][0];
+// console.log(thomsCloset[0][0]);
+
+// //In the same way, access one item from Thom's pants array.
+// thomsCloset[1][0];
+// console.log(thomsCloset[1][0]);
+
+// //Access one item from Thom's accessories array.
+// thomsCloset[2][0];
+// console.log(thomsCloset[2][0]);
+
+// //Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
+// console.log(
+//   "Thom is looking fierce wearing " +
+//     thomsCloset[0][2] +
+//     " and " +
+//     thomsCloset[2][2]
+// );
+// //Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+// thomsCloset[2][2] = "Footie Pajamas";
+// console.log(thomsCloset[2][2]);
+
+//Functions
 
 //OBJECTS
 
