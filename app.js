@@ -238,6 +238,106 @@
 
 //Functions
 
+//Do you think you could write a function called printGreetingwith a parameter namethat returns a greeting with the argument interpolated into the greeting?
+const printGreeting = (name) => {
+  return "Hello there, " + name + "!";
+};
+console.log(printGreeting("Slimer"));
+
+//Write a function printCoolthat accepts one parameter, nameas an argument. The function should print the name and a message saying that that person is cool.
+const printCool = (name) => {
+  return name + " is cool";
+};
+console.log(printCool("Captain Reynolds"));
+
+//Write a function calculateCubethat takes a single number and prints the volume of a cube made from that number.
+const calculateCube = (number) => {
+  return number ** 3;
+};
+console.log(calculateCube(5));
+
+//Write a function isVowelthat takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
+const isVowel = (character) => {
+  return (
+    character == "a" ||
+    character == "e" ||
+    character == "i" ||
+    character == "o" ||
+    character == "u"
+  );
+};
+
+console.log(isVowel("a"));
+
+//Write a function getTwoLengthsthat accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+const getTwoLengths = (string1, string2) => {
+  let arr = [];
+  arr.push(string1.length);
+  arr.push(string2.length);
+  return arr;
+};
+console.log(getTwoLengths("Hank", "Hippopopalous"));
+
+//Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
+const getMultipleLengths = (arr) => {
+  let result = [];
+  for (const i in arr) {
+    result.push(arr[i].length);
+  }
+  return result;
+};
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+//Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
+const maxOfThree = (num1, num2, num3) => {
+  let largest = num1;
+  if (num2 >= num1) {
+    largest = num2;
+  }
+  if (num3 >= num2) {
+    largest = num3;
+  }
+  return largest;
+};
+console.log(maxOfThree(6, 9, 1));
+
+//Write a function printLongestWordthat accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+const printLongestWord = (arrInput) => {
+  //get array of element lengths
+  let arr = [];
+  for (const i in arrInput) {
+    arr.push(arrInput[i].length);
+  }
+  //bubble sort!!
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        var temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  //find string that equals the largest length and return it
+  for (const index in arrInput) {
+    if (arrInput[index].length == arr[arr.length - 1]) {
+      return arrInput[index];
+    }
+  }
+};
+
+console.log(
+  printLongestWord([
+    "BoJack",
+    "Princess",
+    "Diane",
+    "a",
+    "Max",
+    "Peanutbutter",
+    "big",
+    "Todd",
+  ])
+);
 //OBJECTS
 
 // let longest = array.reduce( (firstEl, secondEl) => {
